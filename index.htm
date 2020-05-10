@@ -24,14 +24,7 @@
   border-radius: 5px;
   box-shadow: 0px 0px 5px black;
 }
-#dropdown{
-  width: 90%;
-  padding: 10px;
-  display: block;
-  box-sizing: border-box;
-  margin: auto;
-  border-radius: 3px;
-}
+
 #submit{
   color: white;
   font-size: 1.1em;
@@ -48,6 +41,14 @@
 }
 
 /* All classes*/
+  .dropdown{
+  width: 90%;
+  padding: 10px;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 3px;
+}
 .firstInputs{
   box-sizing: border-box;
   width: 90%;
@@ -201,9 +202,8 @@ body::before {
         <div class="form-style">
           <p class="questions">Which option best describes your current role?</p>
           <select
-          id="dropdown"
-          class=""
-          name="menuDown"
+          class="dropdown"
+          name="dropdown"
           required>
             <option
             disabled
@@ -265,9 +265,8 @@ body::before {
         <div class="form-style">
           <p class="questions"> What is your favorite feature of freeCodeCamp?</p>
           <select
-          id="menuDown"
-          class=""
-          name="menuDown"
+          class="dropdown"
+          name="dropdown"
           required>
             <option
             disabled
