@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+  <link rel="stylesheet" href="master.css">
+
+<style media="screen">
+/* All ids*/
+#title, #description{
+  text-align: center;
+}
+#main{
+  width: 100%;
+  opacity: 1;
+  width: 700px;
+  margin: auto;
+  opacity: 0.8;
+  background-color: #305741;
+  height: 85%;
+  top:10px;
+  position: relative;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px black;
+}
+#menuDown{
+  width: 90%;
+  padding: 10px;
+  display: block;
+  box-sizing: border-box;
+  margin: auto;
+  border-radius: 3px;
+}
+#submit{
+  color: white;
+  font-size: 1.1em;
+  width: 90%;
+  height: 50px;
+  margin: 40px auto 0px auto;
+  display: block;
+  background: #585891;
+}
+
+
+#submit:hover{
+  background-color: #5f5f9d ;
+}
+
+/* All classes*/
+.firstInputs{
+  box-sizing: border-box;
+  width: 90%;
+  display: block;
+  border-radius: 3px;
+  margin: auto;
+  padding: 10px;
+}
+.secondInputs, .thirdInputs{
+  margin: 10px 10px 10px 25px;
+}
+
+.form-style{
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  margin: auto;
+}
+.questions{
+  margin-left: 36px;
+  text-align: left;
+  color: white;
+  font-family: arial, sans-serif;
+}
+.firstLabels{
+  margin-left: 36px;
+  color: white;
+}
+.secondLabels{
+  color: white;
+  margin: 10px;
+}
+.thirdlabels{
+  color: white;
+  margin: 10px;
+}
+.input-textarea{
+  width: 90%;
+  height: 100px;
+  box-sizing: border-box;
+  margin: auto;
+  display: block;
+}
+
+
+
+/* all elements */
+*{
+  margin: 0;
+}
+input, select{
+  font-size: 1.0em;
+}
+body{
+    font-family: arial, sans-serif;
+    font-size: 1.2em;
+}
+header{
+  margin-top: 50px;
+  color: white;
+  padding: 20px;
+}
+select{
+  padding: 5px;
+
+}
+textarea{
+  padding: 10px;
+  font-size: 1.2em;
+}
+
+/*special */
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-image:
+  url(https://scontent-mxp1-1.xx.fbcdn.net/v/t1.0-9/96764718_1530338520469099_6654128935464337408_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_ohc=2mreQKk5le4AX_3uta4&_nc_ht=scontent-mxp1-1.xx&oh=fe1c659861dfed093ff9695dd0bb8be6&oe=5EDC262B);
+  background-size: cover;
+  z-index: -10;
+}
+::placeholder{
+  color: black;
+  opacity: 0.5;
+}
+
+</style>
+
+  </head>
+
+
+
+
+  <body>
+
+      <header>
+        <h1 id="title">freeCodeCamp Survey Form</h1>
+        <p id="description"> <i> Thank you for taking the time to help us improve the platform</i>  </p>
+      </header>
+
+    <div id="main">
+      <br>
+      <br>
+      <form id="survey-form">
+
+        <div class="form-style">
+          <label class="firstLabels" for="" id="name-label">Name</label>
+          <br>
+          <input
+          id="name"
+          type="text"
+          class="firstInputs"
+          name="name"
+          placeholder="Enter your name"
+          required />
+        </div>
+<br>
+        <div class="form-style">
+          <label class="firstLabels" id="email-label">Email
+          </label>
+          <br>
+          <input
+          id="email"
+          type="email"
+          class="firstInputs"
+          name="email"
+          placeholder="Enter your email"
+          required />
+        </div>
+<br>
+        <div class="form-style">
+          <label class="firstLabels" id="number-label">Age
+            <span id="details">(optional)</span>
+          </label>
+          <br>
+            <input
+            id="number"
+            type="number"
+            class="firstInputs"
+            name="age"
+            min="5"
+            max="127"
+            placeholder="Enter your age"
+            required />
+        </div>
+<br>
+        <div class="form-style">
+          <p class="questions">Which option best describes your current role?</p>
+          <select
+          id="dropdown"
+          class=""
+          name="menuDown"
+          required>
+            <option
+            disabled
+            selected>
+              Select your role
+            </option>
+            <option
+            value="student">
+            Student
+            </option>
+            <option value="job">
+              Full Time Job
+            </option>
+            <option value="learner">
+              Full Time Learner
+            </option>
+            <option value="preferNo">
+              Prefer not to say
+            </option>
+            <option value="other">
+              other
+            </option>
+          </select>
+        </div>
+<br>
+        <div class="form-style">
+          <p class="questions">Would you recommend freeCodeCamp to a friend?</p>
+          <label class="secondLabels">
+            <input
+            name="secondInputs"
+            class="secondInputs"
+            type="radio"
+            value="definitely"
+            checked
+            >Definitely
+          </label>
+<br>
+          <label class="secondLabels">
+            <input
+            name="secondInputs"
+            class="secondInputs"
+            type="radio"
+            value="Maybe"
+            >Maybe
+          </label>
+<br>
+          <label class="secondLabels">
+            <input
+            name="secondInputs"
+            class="secondInputs"
+            type="radio"
+            value="notSure"
+            >Not sure
+          </label>
+
+        </div>
+
+<br>
+        <div class="form-style">
+          <p class="questions"> What is your favorite feature of freeCodeCamp?</p>
+          <select
+          id="menuDown"
+          class=""
+          name="menuDown"
+          required>
+            <option
+            disabled
+            selected>
+              Select your role
+            </option>
+            <option
+            value="challenges">
+            Challenges
+            </option>
+            <option value="projects">
+              Projects
+            </option>
+            <option value="community">
+              Community
+            </option>
+            <option value="openSource">
+              Open Source
+            </option>
+          </select>
+        </div>
+<br>
+      <div class="form-style">
+          <p class="questions">What would you like to see improved
+            <span>check all that apply?</span>
+          </p>
+          <label class="thirdlabels">
+          <input
+          class="thirdInputs"
+          name="thirdInputs"
+          type="checkbox"
+          value="front-end-projects">Front-end Projects
+        </label>
+<br>
+        <label class="thirdlabels">
+          <input
+          class="thirdInputs"
+          name="thirdInputs"
+          type="checkbox"
+          value="back-end-projects">Back-end Projects
+        </label>
+<br>
+        <label class="thirdlabels">
+          <input
+          class="thirdInputs"
+          name="thirdInputs"
+          type="checkbox"
+          value="data-visualization">Data Visualization
+        </label>
+<br>
+        <label class="thirdlabels">
+          <input
+          class="thirdInputs"
+          name="thirdInputs"
+          type="checkbox"
+          value="challenges">Challenges
+        </label>
+<br>
+        <label class="thirdlabels">
+          <input
+          class="thirdInputs"
+          name="thirdInputs"
+          type="checkbox"
+          value="openSourceComm">Open Source Community
+        </label>
+<br>
+        <label class="thirdlabels">
+          <input
+          class="thirdInputs"
+          name="thirdInputs"
+          type="checkbox"
+          value="gitterHelp">Gitter help rooms
+        </label>
+
+<br>
+      <label class="thirdlabels">
+        <input
+        class="thirdInputs"
+        name="thirdInputs"
+        type="checkbox"
+        value="videos">Videos
+      </label>
+<br>
+      <label class="thirdlabels">
+        <input
+        class="thirdInputs"
+        name="thirdInputs"
+        type="checkbox"
+        value="cityMeetups">City Meetups
+      </label>
+<br>
+      <label class="thirdlabels">
+        <input
+        class="thirdInputs"
+        name="thirdInputs"
+        type="checkbox"
+        value="wiki">Wiki
+      </label>
+<br>
+      <label class="thirdlabels">
+        <input
+        class="thirdInputs"
+        name="thirdInputs"
+        type="checkbox"
+        value="forum">Forum
+      </label>
+<br>
+      <label class="thirdlabels">
+        <input
+        class="thirdInputs"
+        name="thirdInputs"
+        type="checkbox"
+        value="additionalCourses">Additional Courses
+      </label>
+<br>
+<br>
+</div>
+
+    <div class="form-style">
+      <label class="fourlabels questions">
+        Any comments or suggestions?
+        <textarea
+        id="comments"
+        class="input-textarea"
+        name="name"
+        placeholder="Enter your comment here..."
+        rows="8"
+        cols="80"></textarea>
+      </label>
+
+    </div>
+
+    <div class="form-style">
+      <button
+      class="submitButton"
+      type="submit"
+      id="submit"
+      name="button">Submit</button>
+    </div>
+</form>
+<br><br>
+  </body>
+</html>
